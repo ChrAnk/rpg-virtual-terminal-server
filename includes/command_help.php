@@ -1,6 +1,6 @@
 <?php
 $data_array[] = "table_top_2";
-$data_array[] = " &#25;" . str_pad("COMMAND", 41, ' ') . "&#25;" . str_pad("HELP", 41, ' ') . "&#25; ";
+$data_array[] = array("COMMAND", "DESCRIPTION");
 $data_array[] = "table_mid_2";
 $data_array[] = array("DOSSIER [OPERATIVE]", "VIEW DOSSIER");
 $data_array[] = array("LOGIN [USERNAME] [PASSWORD]", "LOG IN AS USER");
