@@ -1,22 +1,22 @@
 # rpg-virtual-terminal-server
 Cyperpunk themed RPG online dice roller
 
-1 DESCRIPTION
+## DESCRIPTION
 This is a dice roller for online role playing games. It can handle up to 100 D6 and 21 user profiles.
 
-2 INSTALLATION
+## INSTALLATION
 1. Modify the array $operatives in the file includes/class_operative_handler.php to add all players (up to 21).
 2. Place the files in the desired folder on a server running PHP.
 
-3 DETAILED DESCRIPTION
+## DETAILED DESCRIPTION
 The dice roller has two parts:
 
-3.1 FRONT-END
+### FRONT-END
 * index.html															Sends AJAX request to server.php
 * styles.css
 * glass_tty_vt220.ttf											VT220-style font created by Viacheslav Slavinsky: https://github.com/svofski/glasstty/blob/master/Glass_TTY_VT220.ttf
 
-3.2 BACK-END
+### BACK-END
 * server.php															Handles AJAX requests from index.html. Commands are handled as separate includes. Screen images are built using control characters based on the return value from the different commands.
 * includes/class_operatives_handler.php		Stores user profiles, and handles requests for credentials and user information.
 * includes/command_about.php
