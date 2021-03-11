@@ -10,7 +10,7 @@ if(isset($_SESSION['username'])) {
 	$operatives = $operative_handler->return_operatives($status);
 	
 	$data_array[] = "table_top_2";
-	$data_array[] = " &#25;" . str_pad("OPERATIVE", 41, ' ') . "&#25;" . str_pad("STATUS", 41, ' ') . "&#25; ";
+	$data_array[] = array("OPERATIVE", "STATUS");
 	$data_array[] = "table_mid_2";
 	
 	foreach($operatives as $value) {
