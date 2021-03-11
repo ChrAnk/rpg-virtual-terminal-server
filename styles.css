@@ -1,0 +1,177 @@
+@font-face {
+	font-family: vt220;
+	src: url(glass_tty_vt220.ttf);
+}
+
+@keyframes line_animation {
+	from {
+		height: 0;
+	}
+	to {
+		height: 580px;
+	}
+}
+
+@keyframes background {
+	0% {
+		background-color: #000000;
+	}
+	10% {
+		background-color: #030000;
+	}
+	20% {
+		background-color: #090600;
+	}
+	30% {
+		background-color: #060300;
+	}
+	40% {
+		background-color: #0c0600;
+	}
+	50% {
+		background-color: #060300;
+	}
+	60% {
+		background-color: #0f0900;
+	}
+	70% {
+		background-color: #120f00;
+	}
+	80% {
+		background-color: #060300;
+	}
+	90% {
+		background-color: #090600;
+	}
+	100% {
+		background-color: #030000;
+	}
+}
+
+@keyframes text {
+	0% {
+		color: #ecb900;
+	}
+	10% {
+		color: #f0b900;
+	}
+	20% {
+		color: #f6bf00;
+	}
+	30% {
+		color: #f3bc00;
+	}
+	40% {
+		color: #f9bf00;
+	}
+	50% {
+		color: #f3bc00;
+	}
+	60% {
+		color: #f0c300;
+	}
+	70% {
+		color: #ffcc00;
+	}
+	80% {
+		color: #f3bc00;
+	}
+	90% {
+		color: #f6bf00;
+	}
+	100% {
+		color: #f0b900;
+	}
+}
+
+html {
+	background-color: #000;
+	padding: 25px;
+}
+
+button:focus, input:focus {
+	outline: none;
+}
+
+#terminal {
+	background-color: #aaa;
+	border: 10px outset;
+	border-radius: 20px;
+	height: 650px;
+	margin: 0 auto;
+	padding: 25px;
+	width: 1000px;
+}
+
+#monitor {
+	background-color: #333;
+	border: 10px inset;
+	border-radius: 20px;
+	height: 600px;
+	float: left;
+	line-height: 20px;
+	padding: 15px;
+	width: 800px;
+}
+
+#monitor.on {
+	animation: background 10s infinite;
+}
+
+#monitor #text {
+	display: none;
+	height: 580px;
+}
+
+#monitor pre {
+	animation: text 10s infinite;
+	color: #fc0;
+	font-family: vt220;
+	font-size: 18px;
+	margin: 0;
+}
+
+#monitor #command_line {
+	animation: text 10s infinite;
+	color: #fc0;
+	display: none;
+	font-family: vt220;
+	font-size: 18px;
+	height: 20px;
+	position: relative;
+	width: 800px;
+}
+
+#monitor input[type=text] {
+	animation: text 10s infinite;
+	background: transparent;
+	border: 0;
+	bottom: 0;
+	caret-color: #fc0;
+	color: #fc0;
+	font-family: vt220;
+	font-size: 18px;
+	height: 20px;
+	position: relative;
+	width: 600px;
+}
+
+#panel {
+	float: right;
+	padding: 0 0 0 25px;
+	text-align: center;
+	width: 120px;
+}
+
+#panel button {
+	background-color: #aaa;
+	border: 5px groove;
+	font-weight: bold;
+	height: 80px;
+	margin: 0 auto;
+	width: 80px;
+}
+
+#panel button.on {
+	color: #0f0;
+}
